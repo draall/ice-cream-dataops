@@ -33,7 +33,7 @@ modules:
   - name: ice_cream_api
     location:
       path: modules/bootcamp/ice_cream_api
-      hash: f01b6b76
+      hash: cafcf239
     build_variables:
     - key: icapi_ds_external_id
       value: ds_icapi
@@ -82,14 +82,14 @@ modules:
           name: Frontfill every 10 minutes for the last hour of data (streamer)
         source:
           path: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/functions/schedules.Schedule.yaml
-          hash: 715fa105
+          hash: 51cb7774
         kind: Schedule
       - identifier:
           functionExternalId: icapi_datapoints_extractor
           name: Backfill all sites once a day for the last 5 days (gap filling)
         source:
           path: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/functions/schedules.Schedule.yaml
-          hash: 715fa105
+          hash: 51cb7774
         kind: Schedule
       auth:
       - identifier:
